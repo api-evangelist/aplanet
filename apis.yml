@@ -1,23 +1,60 @@
 aid: aplanet
+
 name: Aplanet
-description: 'Aplanet is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://aplanet.pl/wp-content/uploads/2024/01/play-circle.svg
+
+description: 'Aplanet, operating under the brand Adventure Planet Group, is a Polish company specializing in organizing corporate events, meetings, incentives, conferences and team‑building activities. They offer a wide range of services from event planning to execution, targeting businesses seeking professional MICE solutions. Their portfolio includes incentive travel, conferences, online events, and custom event experiences, positioning them as a leader in the regional events industry.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aplanet/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Events
+- MICE
+- Poland
+- Corporate
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aplanet-hosts.yml
+- type: DomainSecurity
+  url: security/aplanet-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aplanet
+  url: https://aplanet.pl
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: The provider's website does not expose any developer documentation or API information.
+  evidence:
+    - url: https://aplanet.pl
+      status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
